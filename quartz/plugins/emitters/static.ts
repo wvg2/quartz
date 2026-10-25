@@ -2,7 +2,7 @@ import { FilePath, QUARTZ, joinSegments } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 import fs from "fs"
 import { glob } from "../../util/glob"
-import { dirname } from "path"
+import path, { dirname } from "path"
 
 export const Static: QuartzEmitterPlugin = () => ({
   name: "Static",
@@ -17,6 +17,18 @@ export const Static: QuartzEmitterPlugin = () => ({
       await fs.promises.mkdir(dirname(dest), { recursive: true })
       await fs.promises.copyFile(src, dest)
       yield dest
+    }
+
+    const robotsPath = path.resolve(QUARTZ, "..", "robots.txt")
+    try {
+      await fs.promises.access(robotsPath)
+      const robotsOutputPath = joinSegments(argv.output, "robots.txt") as FilePath
+      await fs.promises.copyFile(robotsPath, robotsOutputPath)
+      yield robotsOutputPath
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+        throw error
+      }
     }
   },
   async *partialEmit() {},

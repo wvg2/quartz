@@ -104,6 +104,13 @@ export default (() => {
             return resource
           }
         })}
+
+        <script src={joinSegments(baseDir, "static/lang-memory.js")} defer></script>
+
+        <meta name="robots" content="noindex, nofollow" />
+
+        <script src={joinSegments(baseDir, "static/password-gate.js")} defer></script>
+        <script src={joinSegments(baseDir, "static/protection.js")} defer></script>
       </head>
     )
   }
