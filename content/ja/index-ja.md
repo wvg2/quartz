@@ -37,29 +37,29 @@ body:has(.anime-wiki-home) {
 
 ## キャラクターの世界を見つけよう
 
-L-虹のキャラクタープロフィール、グループ情報、物語をご覧ください。気になるメンバーを選んで、その世界を探索しましょう。
+L-<ruby>虹<rt>にじ</rt></ruby>のキャラクタープロフィール、グループ情報、物語をご覧ください。気になるメンバーを選んで、その世界を探索しましょう。
 
 ### キャラクター
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 1rem; margin: 1rem 0 2rem;">
   <a href="../キャラクター/dusk---月読レイ" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
-    <strong>DUSK — 月読レイ</strong><br />
+    <strong>DUSK — <ruby>月読<rt>つくよみ</rt></ruby>レイ</strong><br />
     <span style="color: var(--darkgray);">静かでミステリアスなビジュアルメンバー。</span>
   </a>
   <a href="../キャラクター/glace---瑠璃谷しの" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
-    <strong>GLACE — 瑠璃谷しの</strong><br />
+    <strong>GLACE — <ruby>瑠璃谷<rt>るりや</rt></ruby>しの</strong><br />
     <span style="color: var(--darkgray);">サブリーダーのプロフィールとキャラクター情報。</span>
   </a>
   <a href="../キャラクター/rouge---炎城寺みか" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
-    <strong>ROUGE — 炎城寺みか</strong><br />
+    <strong>ROUGE — <ruby>炎城寺<rt>えんじょうじ</rt></ruby>みか</strong><br />
     <span style="color: var(--darkgray);">L-虹のリーダー、ROUGEのプロフィールとキャラクター情報。</span>
   </a>
   <a href="../キャラクター/zephyr---嵐山ここ" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
-    <strong>ZEPHYR — 嵐山ここ</strong><br />
+    <strong>ZEPHYR — <ruby>嵐山<rt>あらしやま</rt></ruby>ここ</strong><br />
     <span style="color: var(--darkgray);">グループのムードメーカー、ZEPHYRのプロフィール。</span>
   </a>
   <a href="../キャラクター/lumi---光坂のあ" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
-    <strong>LUMI — 光坂のあ</strong><br />
+    <strong>LUMI — <ruby>光坂<rt>こうさか</rt></ruby>のあ</strong><br />
     <span style="color: var(--darkgray);">LUMIの性格、過去、能力をチェック。</span>
   </a>
 </div>
