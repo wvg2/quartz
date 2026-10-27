@@ -32,6 +32,9 @@ Press "Save and deploy" and Cloudflare should have a deployed version of your si
 
 To add a custom domain, check out [Cloudflare's documentation](https://developers.cloudflare.com/pages/platform/custom-domains/).
 
+> [!note] Custom response headers
+> Cloudflare Pages and Netlify support a `_headers` file in the published output directory. Quartz copies a repository-root `_headers` file to the output root (for example, `public/_headers`) during a build. The repository's example policy is `Content-Security-Policy-Report-Only`: it reports policy violations in the browser console without blocking resources. Review those reports and add the domains your enabled plugins and content need before changing the header to `Content-Security-Policy`. The local `npx quartz build --serve` preview does not apply `_headers`.
+
 > [!warning]
 > Cloudflare Pages performs a shallow clone by default, so if you rely on `git` for timestamps, it is recommended that you add `git fetch --unshallow &&` to the beginning of the build command (e.g., `git fetch --unshallow && npx quartz plugin install && npx quartz build`).
 

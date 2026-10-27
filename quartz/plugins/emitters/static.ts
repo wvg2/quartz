@@ -30,6 +30,18 @@ export const Static: QuartzEmitterPlugin = () => ({
         throw error
       }
     }
+
+    const headersPath = path.resolve(QUARTZ, "..", "_headers")
+    try {
+      await fs.promises.access(headersPath)
+      const headersOutputPath = joinSegments(argv.output, "_headers") as FilePath
+      await fs.promises.copyFile(headersPath, headersOutputPath)
+      yield headersOutputPath
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+        throw error
+      }
+    }
   },
   async *partialEmit() {},
 })
