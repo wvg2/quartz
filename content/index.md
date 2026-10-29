@@ -27,12 +27,12 @@ body:has(.anime-wiki-home) {
 
 <form aria-label="Dil seçimi" style="display: flex; justify-content: flex-end; gap: 0.4rem; margin: 0 0 1.5rem;">
   <button type="submit" formaction="./index.html" aria-current="page" style="border: 1px solid var(--lightgray); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.85rem; color: var(--darkgray); cursor: pointer; background: var(--highlight);">Türkçe</button>
-  <button type="submit" formaction="./ja/index-ja.html" style="border: 1px solid var(--lightgray); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.85rem; color: var(--darkgray); cursor: pointer; background: transparent;">日本語</button>
+  <button type="submit" formaction="./ja/" style="border: 1px solid var(--lightgray); border-radius: 999px; padding: 0.3rem 0.7rem; font-size: 0.85rem; color: var(--darkgray); cursor: pointer; background: transparent;">日本語</button>
 </form>
 
 ## Anime Wiki'ye Hoş Geldiniz!
 
-L-Niji dünyasının karakterlerini, grup bilgilerini ve hikâyelerini keşfedin. Karakter kartlarından profillere geçebilir veya wiki arşivinde ayrıntılara göz atabilirsiniz.
+Q-Kirameki dünyasının karakterlerini, grup bilgilerini ve hikâyelerini keşfedin. Karakter kartlarından profillere geçebilir veya wiki arşivinde ayrıntılara göz atabilirsiniz.
 
 ### Karakterler
 
@@ -47,7 +47,7 @@ L-Niji dünyasının karakterlerini, grup bilgilerini ve hikâyelerini keşfedin
   </a>
   <a href="./Karakterler/rouge---enjoji-mika" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
     <strong>ROUGE — Enjoji Mika</strong><br />
-    <span style="color: var(--darkgray);">L-Niji lideri ROUGE'un profilini ve karakter ayrıntılarını keşfedin.</span>
+    <span style="color: var(--darkgray);">Q-Kirameki lideri ROUGE'un profilini ve karakter ayrıntılarını keşfedin.</span>
   </a>
   <a href="./Karakterler/zephyr---arashiyama-koko" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
     <strong>ZEPHYR — Arashiyama Koko</strong><br />
@@ -55,13 +55,13 @@ L-Niji dünyasının karakterlerini, grup bilgilerini ve hikâyelerini keşfedin
   </a>
   <a href="./Karakterler/lumi---kosaka-noa" style="display: block; border: 1px solid var(--lightgray); border-radius: 0.75rem; padding: 1rem; text-decoration: none; color: var(--dark);">
     <strong>LUMI — Kosaka Noa</strong><br />
-    <span style="color: var(--darkgray);">LUMI'nin kişiliğini, geçmişini ve yeteneklerini keşfedin.</span>
+    <span style="color: var(--darkgray);">LUMI'nin sahne imajını ve grup içindeki rolünü keşfedin.</span>
   </a>
 </div>
 
 ### Wiki arşivi
 
-- [Grup ve kimlik dosyası](./l-虹---resmî-grup-ve-ki̇mli̇k-dosyasi) — L-Niji üyeleri ve grup bilgileri.
+- [Grup ve kimlik dosyası](./q-kirameki-grup-kimlik-dosyasi) — Q-Kirameki üyeleri ve grup bilgileri.
 - [Ayrıntılı karakter bilgileri](<./(genel)-ayrıntılı-karakter-bilgileri>) — Karakter profillerinin Türkçe derlemesi.
 - [Japonca karakter bilgileri](<./(genel)-ayrıntılı-karakter-bilgileri(jp)>) — Karakter profillerinin Japonca sürümü.
 

@@ -22,10 +22,15 @@ const script =
 const siteRoot = script ? new URL("../", script.src) : new URL("/", window.location.href)
 const rootPath = siteRoot.pathname
 const currentPath = window.location.pathname.replace(/\/+$/, "")
-const japaneseIndexPath = `${rootPath}ja/index-ja`
+const japaneseIndexPath = `${rootPath}ja`
+const legacyJapaneseIndexPath = `${japaneseIndexPath}/index-ja`
 const turkishIndexPath = `${rootPath}index`
-const isJapaneseIndex =
-  currentPath === japaneseIndexPath || currentPath === `${japaneseIndexPath}.html`
+const isJapaneseIndex = [
+  japaneseIndexPath,
+  `${japaneseIndexPath}/index`,
+  legacyJapaneseIndexPath,
+  `${legacyJapaneseIndexPath}.html`,
+].includes(currentPath)
 const isTurkishIndex =
   currentPath === turkishIndexPath || currentPath === `${turkishIndexPath}.html`
 const isRootIndex =
@@ -35,7 +40,7 @@ const isRootIndex =
 const savedLanguage = getSavedLanguage()
 
 if (isRootIndex && savedLanguage === "ja") {
-  window.location.replace(new URL("ja/index-ja.html", siteRoot))
+  window.location.replace(new URL("ja/", siteRoot))
 } else if (isJapaneseIndex) {
   saveLanguage("ja")
 } else if (isTurkishIndex) {
@@ -52,7 +57,16 @@ document.addEventListener(
     if (!(submitter instanceof HTMLButtonElement) || !submitter.hasAttribute("formaction")) return
 
     const target = new URL(submitter.getAttribute("formaction"), window.location.href)
-    saveLanguage(target.pathname.includes("/ja/index-ja") ? "ja" : "tr")
+    saveLanguage(
+      target.pathname === `${japaneseIndexPath}/` ||
+        target.pathname === japaneseIndexPath ||
+        target.pathname === `${japaneseIndexPath}/index` ||
+        target.pathname === `${japaneseIndexPath}/index.html` ||
+        target.pathname === legacyJapaneseIndexPath ||
+        target.pathname === `${legacyJapaneseIndexPath}.html`
+        ? "ja"
+        : "tr",
+    )
   },
   true,
 )
@@ -75,7 +89,7 @@ document.addEventListener(
       destination.pathname === `${rootPath}index.html`
 
     if (isHomeLink) {
-      link.href = new URL("ja/index-ja.html", siteRoot).href
+      link.href = new URL("ja/", siteRoot).href
     }
   },
   true,

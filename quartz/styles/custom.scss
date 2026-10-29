@@ -6,20 +6,20 @@ body[data-slug^="karakterler/"],
 body[data-slug="(genel)-ayrıntılı-karakter-bilgileri"] {
   .explorer {
     li:has(> a.nav-file-title[href*="(jp)"]),
-    li:has(> a.nav-file-title[href^="/キャラクター/"]),
-    li:has(.folder-outer a.nav-file-title[href^="/キャラクター/"]) {
+    li:has(> a.nav-file-title[href^="/kyarakutaa/"]),
+    li:has(.folder-outer a.nav-file-title[href^="/kyarakutaa/"]) {
       display: none;
     }
   }
 }
 
-body[data-slug="ja/index-ja"],
-body[data-slug="キャラクター/index"],
-body[data-slug^="キャラクター/"],
+body[data-slug="ja/index"],
+body[data-slug="kyarakutaa/index"],
+body[data-slug^="kyarakutaa/"],
 body[data-slug="(genel)-ayrıntılı-karakter-bilgileri(jp)"] {
   .explorer {
     li:has(> a.nav-file-title[href*="(genel)-ayrıntılı-karakter-bilgileri"]:not([href*="(jp)"])),
-    li:has(> a.nav-file-title[href*="l-虹---resmî-grup"]),
+    li:has(> a.nav-file-title[href*="q-kirameki-grup-kimlik-dosyasi"]),
     li:has(> a.nav-file-title[href^="/karakterler/"]),
     li:has(.folder-outer a.nav-file-title[href^="/karakterler/"]) {
       display: none;
